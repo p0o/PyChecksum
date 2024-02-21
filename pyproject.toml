@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "py-checksum"
+version = "0.4.2"
+description = "Create unified checksum from all the files and directories within a certain path"
+authors = ["Pooria Atarzadeh <pooria.attz@pm.me>"]
+readme = "README.md"
+packages = [{include = "py_checksum", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pychecksum = 'py_checksum.cli:main'
