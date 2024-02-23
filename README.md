@@ -22,10 +22,10 @@ Create a checksum of all the files and sub-directoreis within `src` directory:
 ./pychecksum -d ./src
 ```
 
-Exclude `node_modules` and `__pycache__` directories:
+Exclude `node_modules`, `__pycache__` directories and `.env` files:
 
 ```bash
-./pychecksum -d . -e node_modules -e __pycache__
+./pychecksum -d . -e node_modules __pycache__ .env
 ```
 
 Limit the size of the checksum to 10 characters:
