@@ -13,7 +13,7 @@ def calculate_checksum(file_path):
     except Exception as e:
         return ""
 
-def generate_checksums_for_directory(directory_path, excluded_folders, checksum_size):
+def generate_checksums_for_directory(directory_path, excluded_items, checksum_size):
     """Generate checksums for all files in directory, excluding specified folders."""
     # To store file paths for checksum calculation
     files_to_process = []
@@ -21,7 +21,8 @@ def generate_checksums_for_directory(directory_path, excluded_folders, checksum_
     
     for root, dirs, files in os.walk(directory_path):
         # Exclude specified directories
-        dirs[:] = [d for d in dirs if d not in excluded_folders]
+        dirs[:] = [d for d in dirs if d not in excluded_items]
+        files[:] = [f for f in files if f not in excluded_items]
         
         for file in files:
             file_path = os.path.join(root, file)
