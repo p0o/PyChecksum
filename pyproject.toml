@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-checksum"
-version = "0.4.3"
+version = "0.5.1"
 description = "Create unified checksum from all the files and directories within a certain path"
 authors = ["Pooria Atarzadeh <pooria.attz@pm.me>"]
 readme = "README.md"
